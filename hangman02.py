@@ -26,19 +26,17 @@ while win == 1:
     word = (random.choice(open('./wordlist.txt').readlines())).rstrip()
     os.system('clear')
     print "I've selected a word.  See if you can guess it.", word
-    print gallows[tries], "\n"
 
 # Print out underscores for each letter in the chosen word
+    print "\n", gallows[tries], "\n", tries
     for i in word:
         print "_",
 
+# Main loop
     while tries != 0:
         holder = ""
         print "\n"
-        guess = raw_input("Pick a letter: ").lower()[:1]
-        print "GUESS LENGTH: %d" % len(guess)
-        os.system('clear')
-        print "\n", gallows[tries], "\n"
+        guess = raw_input("Pick a letter: ").lower()[:1]       
         if guess in used:
             for i in word:
                 if i in used:
@@ -52,6 +50,9 @@ while win == 1:
             print "Letters used so far:", used
         else:
             used += guess
+            os.system('clear')
+            print "I've selected a word.  See if you can guess it.", word
+            print "\n", gallows[tries], "\n", tries
             for i in word:
                 if i in used:
                     print i,
@@ -89,7 +90,8 @@ while win == 1:
 
             if guess not in word:
                 tries -= 1
-
+            os.system('clear')
+            print "\n", gallows[tries], "\n", tries
             print "\n\n", "    You have", tries, "tries left"
             print "    Letters used so far:", used
 
