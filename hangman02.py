@@ -9,15 +9,26 @@ gameswon = 0
 runningtotal = 0
 totgames = 0
 word = ""
-
+gallows = [
+		" _______\n|/     |\n|     _O_\n|    / | \\\n|      |\n|     / \\\n|    /   \\\n|________",
+		" _______\n|/     |\n|     _O_\n|    / | \\\n|      |\n|     / \\\n|\n|________",
+		" _______\n|/     |\n|     _O_\n|    / | \\\n|      |\n|\n|\n|________",
+		" _______\n|/     |\n|     _O_\n|    / | \\\n|\n|\n|\n|________",
+		" _______\n|/     |\n|     _O_\n|\n|\n|\n|\n|________",
+		" _______\n|/     |\n|      O\n|\n|\n|\n|\n|________",
+		" _______\n|/     |\n|\n|\n|\n|\n|\n|________",
+		" _______\n|/\n|\n|\n|\n|\n|\n|________"
+]
 while win == 1:
     win = 0
     used = ""
-    tries = 10
+    tries = 7
     word = (random.choice(open('./wordlist.txt').readlines())).rstrip()
     os.system('clear')
-    print "I've selected a word.  See if you can guess it."
+    print "I've selected a word.  See if you can guess it.", word
+    print gallows[tries], "\n"
 
+# Print out underscores for each letter in the chosen word
     for i in word:
         print "_",
 
@@ -27,6 +38,7 @@ while win == 1:
         guess = raw_input("Pick a letter: ").lower()[:1]
         print "GUESS LENGTH: %d" % len(guess)
         os.system('clear')
+        print "\n", gallows[tries], "\n"
         if guess in used:
             for i in word:
                 if i in used:
