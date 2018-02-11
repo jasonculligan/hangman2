@@ -68,7 +68,7 @@ while win == 1:
                 runningtotal += tries
                 while True:
                     goagain = raw_input("Would you like another go? (yes or no) ").lower()
-                    if goagain in ['yes', 'no', 'cabbage']:
+                    if goagain in ['yes', 'no', 'marmite']:
                         totgames += 1
                         break
                     else:
@@ -78,8 +78,8 @@ while win == 1:
                     tries = 0
                     os.system('clear')
                     break
-                if goagain == "cabbage":
-                    print "You've found the easter egg!!"
+                if goagain == "marmite":
+                    print "Yep. Now you're fired.  Thanks Marmite. >:("
                     exit()
                 else:
                     if gameswon == 1:
