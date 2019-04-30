@@ -1,5 +1,5 @@
 # Hangman 0.3
-# jasonculligan@gmail.com
+# jasonculligan
 
 import random
 import os
