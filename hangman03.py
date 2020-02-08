@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # Hangman 0.3
 # jasonculligan
 
