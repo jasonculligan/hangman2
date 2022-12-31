@@ -1,5 +1,6 @@
 # Hangman 0.2
 # Jason Culligan
+# This actually works in 2023  in Python2, so do not update it to python3 in this file as it's the only working copy right now.
 
 import random
 import os
