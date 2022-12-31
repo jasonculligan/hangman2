@@ -26,7 +26,7 @@ while win == 1:
     tries = 7
     word = (random.choice(open('./wordlist.txt').readlines())).rstrip()
     os.system('clear')
-    print "I've selected a word.  See if you can guess it.", word
+    print "I've selected a word.  See if you can guess it."
 
 # Print out underscores for each letter in the chosen word
     print "\n", gallows[tries], "\n", tries
